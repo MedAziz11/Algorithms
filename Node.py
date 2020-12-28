@@ -1,9 +1,9 @@
 class Node(object):
     """Directed Node"""
 
-    def __init__(self, key, neighbors=None):
+    def __init__(self, key, neighbors={}):
             self.key = key
-            self.neighbors = neighbors if neighbors else {}#all the succ to a Node
+            self.neighbors = neighbors#all the succ to a Node
             
     def addNeighbor(self, neighbor, cost=0):
         self.neighbors[neighbor] = cost
